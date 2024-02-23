@@ -47,19 +47,23 @@ nav ul li button {
     padding: 15px;
     font-size: 20px;
 }
-.dropdown{
+
+.dropdown {
     display: none;
     background: #fff;
     font-size: 20px;
     position: absolute;
 }
-.dropdown div{
+
+.dropdown div {
     padding: 10px 15px;
 }
-.dropdown div:hover{
+
+.dropdown div:hover {
     background: #e8dee7;
     cursor: pointer;
 }
+
 nav ul li.search {
     margin-left: auto;
 }
@@ -287,6 +291,8 @@ nav ul li.search {
 
 .addrsee .location p {
     font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .addrsee .location p i {
@@ -323,4 +329,158 @@ nav ul li.search {
     margin-top: 15px;
     font-style: oblique;
     font-family: revert;
+}
+
+/* Respnsiveness */
+
+@media (max-width:768px) {
+    * {
+        overflow-x: hidden;
+        /* overflow-y: hidden; */
+    }
+
+    .box {
+        overflow-y: hidden;
+    }
+
+    .bandText {
+        text-align: justify;
+    }
+
+    .bandImg {
+        gap: 48px;
+    }
+
+    .bandImg .bandImgbox img {
+        width: 200px;
+    }
+
+    #tour .travel {
+        width: auto;
+        margin: 20px;
+    }
+
+    .tourCard {
+        padding: 20px;
+    }
+
+    .tourCard .card h4,
+    .tourCard .card .date,
+    .tourCard .card p {
+        padding: 7px 5px 0 20px;
+        text-align: start;
+    }
+
+    .addrsee {
+        width: auto;
+        padding: 20px;
+    }
+
+    #footer {
+        padding: 56px;
+    }
+
+    #footer .icon {
+        overflow-y: hidden;
+    }
+}
+
+@media (max-width:480px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    li:first-child {
+        display: block;
+    }
+
+    li:last-child {
+        display: block;
+        color: #fff;
+        margin-left: auto;
+    }
+
+    li:last-child .active {
+        display: inline-block;
+    }
+
+    li:last-child .hide {
+        display: none;
+    }
+
+    /* 
+    .menuToggle {
+        display: flex;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background: transparent url("data:image/png;base64,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") no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        background-position: center;
+        cursor: pointer;
+    } */
+    /* 
+    .menuToggle.active {
+        background: URL('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrI_WyV-ctJYaJD0_EkjsxxDkQgB46GM7bEg&usqp=CAU');
+        background-size: cover;
+        background-position: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+    }*/
+
+    #home {
+        height: 250px;
+    }
+
+    .box {
+        height: 250px;
+    }
+    .box img{
+        height: 100%;
+    }
+    .abdouBand {
+        width: auto;
+    }
+    .bandImg {
+        display: grid;
+        justify-content: center;
+    }
+    .bandImg .bandImgbox img {
+        width: auto;
+    }
+    #tour{
+        padding-bottom: 15px;
+    }
+    .tourCard {
+        display: grid;
+        width: auto;
+        row-gap: 20px;
+    }
+    .tourCard .card {
+        width: auto;
+    }
+    .addrsee {
+    
+        grid-template-columns: auto;
+     
+    }
+    .addrsee .location p {
+       
+        padding-left: 3px;
+    }
+    .addrsee .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .icon span {
+        font-size: 26px;
+        padding: 0;
+    }
 }
